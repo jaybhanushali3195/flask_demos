@@ -4,19 +4,19 @@ from flask import Flask
 app = Flask(__name__)
 
 """1. Add a View Function for the Home page."""
-app.route('/')
+@app.route('/')
 def hello():
-    return "Paws Rescue Center 🐾"
+    return '<h1 style="text-align:center">Paws Rescue Center 🐾</h1>'
 
 
-app.route('/about')
+@app.route('/about')
 def about():
-    return """We are a non-profit organization working as an animal rescue. 
+    return """<h1>About Us:</h1><p>We are a non-profit organization working as an animal rescue. 
     We aim to help you connect with the purrfect furbaby for you! 
     The animals you find on our website are rescued and rehabilitated animals. 
-    Our mission is to promote the ideology "adopt, don't hop"! """
+    Our mission is to promote the ideology "adopt, don't hop"!</p> """
 
 
 if __name__ == "__main__":
     """ """
-    app.run(debug=True, host = 'localhost', port=8000)
+    app.run(debug=True)
